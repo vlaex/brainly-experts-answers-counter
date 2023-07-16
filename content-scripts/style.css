@@ -1,0 +1,109 @@
+:root {
+  --gray-light: #ebf2f7;
+  --gray-dark: #e5e5e5;
+}
+
+.js-main-container {
+  max-width: 100% !important;
+  max-height: max-content;
+  height: max-content;
+  flex-direction: column !important;
+  margin-bottom: 15px !important;
+}
+.sg-layout__content, .sg-layout__aside-content, [hidden], .hidden, .extension-panel {
+  display: none !important;
+}
+.sg-button[disabled] {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+input.sg-input.add-user-input {
+  width: 100%;
+  margin-right: 5px;
+}
+
+.js-main-container > .sg-flex:first-child > .sg-flex > *:not(:first-child) {
+  margin-left: 8px;
+}
+input[type="date"].from-date, 
+input[type="date"].to-date {
+  padding: 0 10px;
+  font-size: 15px;
+}
+
+.js-main-container .sg-horizontal-separator.sg-horizontal-separator--with-margin {
+  margin: 12px 0;
+}
+
+.users-to-check > .user:not(:first-child) {
+  margin-top: 5px;
+}
+.users-to-check > .user, .users-to-check {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.users-to-check > .user > .user-info {
+  display: grid;
+  grid-template-columns: 50px 1fr 1fr 150px 50px 40px;
+  gap: 10px;
+  align-items: center;
+  background: var(--gray-light);
+  padding: 5px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition-duration: .3s;
+}
+.users-to-check > .user > .user-info:hover {
+  background-color: var(--gray-dark);
+}
+.users-to-check > .user > .user-info > .sg-headline {
+  justify-self: center;
+  margin-right: 20px;
+}
+
+.sg-button.add-user[disabled] .sg-spinner {
+  height: 30px;
+  width: 30px;
+}
+
+ul.user-answers {
+  padding-inline: 5px;
+  margin-block: 5px;
+}
+.user-answers > li {
+  display: grid;
+  grid-template-columns: auto 1fr 0.2fr;
+  align-items: center;
+  padding: 2px 0;
+}
+.user-answers > li > .sg-text--link {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  height: 30px;
+  padding-left: 5px;
+  padding-top: 1px;
+}
+.user-answers > li:nth-child(2n) {
+  background-color: var(--gray-light);
+}
+.user-answers > li > a.sg-text--link[data-approved] {
+  color: #24a865;
+}
+.user-answers > li > a.sg-text--link[data-best]:not([data-approved]) {
+  color: #c18101;
+}
+
+.sg-button.thank-answer {
+  background-color: #f15946;
+  padding: 0 10px;
+  height: 26px;
+}
+.sg-button.thank-answer > .sg-button__icon {
+  margin-right: 3px;
+}
+
+.count-user-answers {
+  justify-self: center;
+}

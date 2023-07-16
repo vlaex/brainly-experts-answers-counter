@@ -1,0 +1,14 @@
+{
+  "author": "vlaex",
+  "name": "Expert responses counter for Brainly.com",
+  "manifest_version": 3,
+  "version": "1.2",
+  "icons": { 
+    "128": "icon.png" 
+  },
+  "content_scripts": [{
+    "matches": ["*://brainly.com/question/add?answers_counter"],
+    "js": ["content-scripts/utilities.js", "content-scripts/api.js", "content-scripts/renderUser.js", "content-scripts/prepare.js", "content-scripts/observer.js"],
+    "css": ["content-scripts/style.css"]
+  }]
+}
