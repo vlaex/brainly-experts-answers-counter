@@ -1,4 +1,4 @@
-const MARKET = 'znanija.com';
+const MARKET = 'brainly.com';
 
 async function getUserAnswers({
   userId,
